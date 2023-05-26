@@ -1,7 +1,7 @@
-const scrollBtn = document.querySelector('.scroll-top-btn');
+const scrollBtn = document.querySelector('.arrow-top');
 
 window.addEventListener('scroll', function() {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 500) {
     scrollBtn.style.display = 'block';
   } else {
     scrollBtn.style.display = 'none';

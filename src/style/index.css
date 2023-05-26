@@ -32,6 +32,7 @@
 
 .arrow-top {
   position: fixed;
+  display: none;
   bottom: 2%;
   right: 1%;
   border-radius: 50%;
