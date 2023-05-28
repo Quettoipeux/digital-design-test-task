@@ -106,6 +106,7 @@ h1 {
 
 .card {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   background-color: #fff;
@@ -314,10 +315,6 @@ body.dark-theme {
 .card.dark-theme {
   background-color: #555;
   color: #fff;
-}
-
-.card.dark-theme .buy-btn {
-
 }
 
 .buy-form.dark-theme {
