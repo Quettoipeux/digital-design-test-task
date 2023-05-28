@@ -1,30 +1,44 @@
+/* Общие стили */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  display: none;
+}
+
 /* Стили навигационного меню */
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 12px 16px;
+  padding: 14px 24px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
-#navbar ul {
+.navbar ul {
   display: flex;
-  margin: 0;
-  padding: 0;
+  flex-flow: row wrap;
 }
 
-#navbar li {
+.navbar li {
+  display: flex;
+  flex-flow: row wrap;
   margin-right: 24px;
   font-weight: bold;
 }
 
-#navbar a {
+.navbar li:last-child {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.navbar a {
   color: #333;
 }
 
@@ -34,7 +48,7 @@
   position: fixed;
   display: none;
   bottom: 2%;
-  right: 1%;
+  right: 20px;
   border-radius: 50%;
   border: 2px solid #333;
   width: 40px;
@@ -57,22 +71,20 @@
 
 /* Кнопка для смены темы */
 
-.theme-switch-btn {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-  background-color: none;
-  border: none;
-  padding: 0;
-  margin-left: auto;
-  margin-right: 1%;
+.sun {
+  width: 20px;
+  height: 20px;
+}
+
+.sun path {
+  stroke-width: 1;
+  stroke: #333;
 }
 
 /* Область для отображения категорий */
 
-#categories {
-  margin-top: 92px; /* учитывает высоту навигационного меню */
+.categories {
+  margin-top: 80px; /* учитывает высоту навигационного меню */
   padding: 0 16px;
 }
 
@@ -81,14 +93,21 @@
   font-size: 24px;
 }
 
+
+/* Карточка товара */
+
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
 }
 
 .card {
-  flex: 1 1 400px;
-  margin: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -106,29 +125,30 @@
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 20px;
+  text-align: center;
 }
 
 .card-date {
   margin-bottom: 8px;
   font-style: italic;
   font-size: 12px;
+  text-align: center;
 }
 
 .buy-btn {
-  display: block;
-  margin-top: 16px;
+  display: flex;
+  margin: 16px auto 0;
   padding: 8px 16px;
   font-weight: bold;
   border: none;
   border-radius: 4px;
-  background-color: #f39c12;
+  background-color: #3E6835;
   color: #fff;
-  cursor: pointer;
   transition: background-color 0.2s ease-in;
 }
 
 .buy-btn:hover {
-  background-color: #e67e22;
+  background-color: #2C6220;
 }
 
 /* Форма для покупки товара */
@@ -147,7 +167,7 @@
 }
 
 .buy-form {
-  width: 400px;
+  width: 350px;
   padding: 24px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -171,12 +191,11 @@
   font-size: 16px;
   border: 2px solid #ccc;
   border-radius: 10px;
-  box-sizing: border-box;
   margin-bottom: 16px;
 }
 
 .buy-form textarea {
-  resize: vertical;
+  resize: none;
 }
 
 input[type="radio"] {
@@ -212,7 +231,7 @@ input[type="radio"] + label::before {
 }
 
 input[type="radio"]:checked + label::before {
-  border-color: #111311;
+  background-color: #407734;
 }
 
 .buy-form-btns button {
@@ -221,29 +240,28 @@ input[type="radio"]:checked + label::before {
   font-weight: bold;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
+  background-color: #3E6835;
   transition: background-color 0.2s ease-in;
 }
 
-.buy-form-btns .submit-btn {
-  background-color: #f39c12;
+.submit-btn {
   color: #fff;
 }
 
 .buy-form-btns .submit-btn:hover {
-  background-color: #e67e22;
+  background-color: #2C6220;
 }
 
 .buy-form-btns .close-btn {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
+  background-color: #793E43;
+  color: #fff;
   transition: color 0.2s ease-in;
 }
 
 .buy-form-btns .close-btn:hover {
   color: #fff;
-  background-color: #333;
+  background-color: #72262D;
+  transition: background-color 0.2s ease-in
 }
 
 input:invalid {
@@ -276,41 +294,64 @@ footer ul li:last-child {
 /* Темная тема */
 
 body.dark-theme {
-  background-color: #333;
-  color: #fff;
-}
-
-#navbar.dark-theme {
-  background-color: #333;
-  color: #fff;
-}
-
-#navbar.dark-theme a {
-  color: #fff;
-}
-
-.scroll-top-btn.dark-theme,
-.theme-switch-btn.dark-theme {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
-}
-
-.category-title.dark-theme,
-.card.dark-theme,
-.buy-form.dark-theme,
-.buy-form .submit-btn.dark-theme,
-.buy-form-btns .close-btn.dark-theme,
-footer.dark-theme {
   background-color: #555;
   color: #fff;
 }
 
-/* изменение цвета кнопки при наведении */
-#navbar.dark-theme .scroll-top-btn:hover,
-#navbar.dark-theme .theme-switch-btn:hover,
-.buy-form-btns .submit-btn.dark-theme:hover,
-.buy-form-btns .close-btn.dark-theme:hover {
-  background-color: #333;
+.navbar.dark-theme {
+  background-color: #555;
+  color: #fff;
+}
+
+.navbar.dark-theme a {
+  color: #fff;
+}
+
+.navbar.dark-theme .sun path {
+  stroke: #fff;
+}
+
+.card.dark-theme {
+  background-color: #555;
+  color: #fff;
+}
+
+.card.dark-theme .buy-btn {
+
+}
+
+.buy-form.dark-theme {
+  background-color: #555;
+  color: #fff;
+}
+
+.buy-form.dark-theme textarea::placeholder {
+  color: #d8d8d8;
+}
+
+.buy-form.dark-theme .close-btn {
+  background-color: #793E43;
+  color: #fff;
+}
+
+.buy-form.dark-theme .close-btn:hover {
+  background-color: #8A3D44;
+  color: #fff;
+}
+
+.buy-form.dark-theme .submit-btn,
+.card.dark-theme .buy-btn {
+  background-color: #3E6835;
+  color: #fff;
+}
+
+.buy-form.dark-theme .submit-btn:hover,
+.card.dark-theme .buy-btn:hover {
+  background-color: #407734;
+  color: #fff;
+}
+
+footer.dark-theme {
+  background-color: #555;
   color: #fff;
 }
