@@ -2,6 +2,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #fbfbf7;
 }
 
 h1 {
@@ -16,7 +17,7 @@ h1 {
   left: 0;
   width: 100%;
   padding: 14px 24px;
-  background-color: #fff;
+  background-color: #f7f7ee;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
@@ -39,7 +40,7 @@ h1 {
 }
 
 .navbar a {
-  color: #333;
+  color: #474747;
 }
 
 /* Кнопка для возврата к началу страницы */
@@ -50,23 +51,23 @@ h1 {
   bottom: 2%;
   right: 20px;
   border-radius: 50%;
-  border: 2px solid #333;
+  border: 2px solid #474747;
   width: 40px;
   height: 40px;
   cursor: pointer;
-  background: #ffffff;
+  background: #f7f7ee;
   transform: rotate(90deg);
 }
 
 .arrow-top path {
   fill: rgb(255, 255, 255);
   stroke-width: 4;
-  stroke: #333;    
+  stroke: #474747;    
   transition: fill 0.5s ease-out;
 }
 
 .arrow-top:hover path {
-  fill: #333;
+  fill: #474747;
 }
 
 /* Кнопка для смены темы */
@@ -78,7 +79,7 @@ h1 {
 
 .sun path {
   stroke-width: 1;
-  stroke: #333;
+  stroke: #474747;
 }
 
 /* Область для отображения категорий */
@@ -109,7 +110,7 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #fff;
+  background-color: #f7f7ee;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -143,13 +144,13 @@ h1 {
   font-weight: bold;
   border: none;
   border-radius: 4px;
-  background-color: #3E6835;
-  color: #fff;
+  background-color: #4f9f4f;
+  color: #fbfbf7;
   transition: background-color 0.2s ease-in;
 }
 
 .buy-btn:hover {
-  background-color: #2C6220;
+  background-color: #3c773c;
 }
 
 /* Форма для покупки товара */
@@ -170,7 +171,7 @@ h1 {
 .buy-form {
   width: 350px;
   padding: 24px;
-  background-color: #fff;
+  background-color: #f7f7ee;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   text-align: center;
@@ -190,7 +191,7 @@ h1 {
   width: 100%;
   padding: 8px;
   font-size: 16px;
-  border: 2px solid #ccc;
+  border: 2px solid #c6c6c6;
   border-radius: 10px;
   margin-bottom: 16px;
 }
@@ -226,13 +227,13 @@ input[type="radio"] + label::before {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: #fff;
-  border: 2px solid #ccc;
+  background-color: #fbfbf7;
+  border: 2px solid #c6c6c6;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 input[type="radio"]:checked + label::before {
-  background-color: #407734;
+  background-color: #474747;
 }
 
 .buy-form-btns button {
@@ -241,27 +242,27 @@ input[type="radio"]:checked + label::before {
   font-weight: bold;
   border: none;
   border-radius: 4px;
-  background-color: #3E6835;
+  background-color: #4f9f4f;
   transition: background-color 0.2s ease-in;
 }
 
 .submit-btn {
-  color: #fff;
+  color: #fbfbf7;
 }
 
 .buy-form-btns .submit-btn:hover {
-  background-color: #2C6220;
+  background-color: #3c773c;
 }
 
 .buy-form-btns .close-btn {
-  background-color: #793E43;
-  color: #fff;
+  background-color: #9f4f4f;
+  color: #fbfbf7;
   transition: color 0.2s ease-in;
 }
 
 .buy-form-btns .close-btn:hover {
-  color: #fff;
-  background-color: #72262D;
+  color: #fbfbf7;
+  background-color: #773c3c;
   transition: background-color 0.2s ease-in
 }
 
@@ -274,7 +275,7 @@ input:invalid {
 footer {
   margin-top: 32px;
   padding: 8px 16px;
-  background-color: #fff;
+  background-color: #f7f7ee;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -295,60 +296,60 @@ footer ul li:last-child {
 /* Темная тема */
 
 body.dark-theme {
-  background-color: #555;
-  color: #fff;
+  background-color: #555555;
+  color: #fbfbf7;
 }
 
 .navbar.dark-theme {
-  background-color: #555;
-  color: #fff;
+  background-color: #474747;
+  color: #fbfbf7;
 }
 
 .navbar.dark-theme a {
-  color: #fff;
+  color: #fbfbf7;
 }
 
 .navbar.dark-theme .sun path {
-  stroke: #fff;
+  stroke: #fbfbf7;
 }
 
 .card.dark-theme {
-  background-color: #555;
-  color: #fff;
+  background-color: #474747;
+  color: #fbfbf7;
 }
 
 .buy-form.dark-theme {
-  background-color: #555;
-  color: #fff;
+  background-color: #474747;
+  color: #fbfbf7;
 }
 
 .buy-form.dark-theme textarea::placeholder {
-  color: #d8d8d8;
+  color: #c6c6c6;
 }
 
 .buy-form.dark-theme .close-btn {
-  background-color: #793E43;
-  color: #fff;
+  background-color: #9f4f4f;
+  color: #fbfbf7;
 }
 
 .buy-form.dark-theme .close-btn:hover {
-  background-color: #8A3D44;
-  color: #fff;
+  background-color: #b87171;
+  color: #fbfbf7;
 }
 
 .buy-form.dark-theme .submit-btn,
 .card.dark-theme .buy-btn {
-  background-color: #3E6835;
-  color: #fff;
+  background-color: #4f9f4f;
+  color: #fbfbf7;
 }
 
 .buy-form.dark-theme .submit-btn:hover,
 .card.dark-theme .buy-btn:hover {
-  background-color: #407734;
-  color: #fff;
+  background-color: #71b871;
+  color: #fbfbf7;
 }
 
 footer.dark-theme {
-  background-color: #555;
-  color: #fff;
+  background-color: #474747;
+  color: #fbfbf7;
 }
